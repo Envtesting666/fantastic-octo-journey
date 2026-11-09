@@ -1,0 +1,6 @@
+.godot/
+*.tmp
+*.log
+.source/
+tools/cache/
+*.blend1

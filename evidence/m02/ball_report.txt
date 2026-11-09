@@ -1,0 +1,28 @@
+physics engine=Jolt Physics ball mass=0.43 kg radius=0.11 m
+PASS ball rests on grass: y=0.110
+PASS drop 2 m -> first rebound 0.78 m (expected 0.6-1.0)
+  roll t=0s v=9.99 m/s spin·r=9.99 y=0.1100
+  roll t=1s v=8.69 m/s spin·r=8.69 y=0.1100
+  roll t=2s v=7.57 m/s spin·r=7.57 y=0.1100
+  roll t=3s v=6.57 m/s spin·r=6.57 y=0.1099
+  roll t=4s v=5.67 m/s spin·r=5.67 y=0.1099
+  roll t=5s v=4.85 m/s spin·r=4.85 y=0.1099
+  roll t=6s v=4.09 m/s spin·r=4.09 y=0.1099
+  roll t=7s v=3.38 m/s spin·r=3.38 y=0.1099
+  roll t=8s v=2.70 m/s spin·r=2.70 y=0.1099
+  roll t=9s v=0.35 m/s spin·r=0.35 y=0.1100
+PASS 10 m/s ground pass rolls 47.6 m in 9.5 s (expected 35-55 m)
+PASS post rebounds: ends at (3.659919, 0.109999, -13.65846), speed 3.5 m/s
+PASS crossbar rebounds: ends at (-0.000028, 0.117622, -6.495691), speed 6.6 m/s
+  captured net_impact.png
+  captured net_rest.png
+PASS net catches 25 m/s shot: ends at (0.000035, 0.11, -27.21), speed 0.0 m/s
+PASS no tunnelling at 40 m/s: ends at (-2.000007, 0.109999, -27.20999), speed 0.0 m/s
+PASS roof net holds lob: ends at (-0.000026, 0.262053, -27.1903), speed 0.6 m/s
+PASS side boundary keeps a 30 m/s clearance: ends at (1.740217, 0.109991, 0.000001), speed 7.7 m/s
+PASS end boundary keeps a long ball: ends at (0.0, 0.174732, 12.09365), speed 7.5 m/s
+PASS corner push keeps ball inside kerbs: last (18.69965, 0.109984, 27.29363)
+PASS walk dribble: 2 touches in 5 s, ball ahead by 0.40-1.46 m
+PASS run dribble: 3 touches in 5 s, ball ahead by 0.50-1.33 m
+PASS reset returns ball to spawn: (0.0, 0.11, -6.9)
+RESULT failures=0

@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://ball/ball.gd" id="1"]
+[ext_resource type="Shader" path="res://ball/ball.gdshader" id="2"]
+
+[sub_resource type="PhysicsMaterial" id="BallSurface"]
+friction = 0.5
+bounce = 0.63
+
+[sub_resource type="SphereShape3D" id="BallShape"]
+radius = 0.11
+
+[sub_resource type="ShaderMaterial" id="BallMaterial"]
+shader = ExtResource("2")
+
+[sub_resource type="SphereMesh" id="BallMesh"]
+material = SubResource("BallMaterial")
+radius = 0.11
+height = 0.22
+radial_segments = 48
+rings = 24
+
+[node name="Ball" type="RigidBody3D" groups=["ball"]]
+collision_layer = 4
+collision_mask = 9
+mass = 0.43
+inertia = Vector3(0.00347, 0.00347, 0.00347)
+physics_material_override = SubResource("BallSurface")
+continuous_cd = true
+linear_damp_mode = 1
+angular_damp_mode = 1
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BallShape")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("BallMesh")

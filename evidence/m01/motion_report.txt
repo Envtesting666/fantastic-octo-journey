@@ -1,0 +1,37 @@
+renderer=NVIDIA GeForce RTX 3090 viewport=(1920.0, 1080.0)
+PASS walk speed 1.50 m/s (target 1.50)
+  walk Left foot: planted 53/120 frames, median forward slide +0.007 m/s (0% of body speed)
+PASS walk Left planted slide under 5%
+  walk Right foot: planted 54/120 frames, median forward slide -0.012 m/s (1% of body speed)
+PASS walk Right planted slide under 5%
+PASS run speed 4.50 m/s (target 4.50)
+  run Left foot: planted 15/120 frames, median forward slide -0.044 m/s (1% of body speed)
+PASS run Left planted slide under 5%
+  run Right foot: planted 21/120 frames, median forward slide -0.031 m/s (1% of body speed)
+PASS run Right planted slide under 5%
+PASS jog 60% speed 2.38 m/s (target 2.38)
+  jog 60% Left foot: planted 20/120 frames, median forward slide -0.044 m/s (2% of body speed)
+PASS jog 60% Left planted slide under 5%
+  jog 60% Right foot: planted 33/120 frames, median forward slide -0.014 m/s (1% of body speed)
+PASS jog 60% Right planted slide under 5%
+PASS jog 80% speed 3.44 m/s (target 3.44)
+  jog 80% Left foot: planted 21/120 frames, median forward slide -0.119 m/s (3% of body speed)
+PASS jog 80% Left planted slide under 5%
+  jog 80% Right foot: planted 17/120 frames, median forward slide -0.068 m/s (2% of body speed)
+PASS jog 80% Right planted slide under 5%
+PASS 90° turn while running within 10° in 1.12 s
+PASS stop from run in 0.57 s over 1.23 m
+PASS idle blend after stop: moving=0.000
+PASS boundary clamp x=18.500 (limit 18.5)
+PASS feet stop at boundary: stride=0.000 moving=0.000
+PASS camera clear of clubhouse: eye=(-18.70681, 1.505334, -10.0)
+PASS camera clear of left fence: eye=(-24.14785, 2.963348, 13.62952)
+PASS camera clear of right fence: eye=(22.28399, 2.964022, 0.82229)
+PASS camera clear of back fence: eye=(0.931928, 1.953946, -26.06738)
+PASS mouse yaw -57.3°, pitch clamp 5.0°..36.0°
+PASS camera above ground at lowest pitch: y=1.71
+PASS reset to spawn: pos=(0.0, 0.025, -6.0) vel=(0.0, 0.0, 0.0) cam_yaw=0.000
+frame time over 900 frames, vsync off: mean 0.92 ms, p50 0.79, p95 1.45, p99 2.05, max 2.28 ms (1088 FPS mean)
+  draw calls 109, primitives 64128, video mem 233 MB
+PASS p95 frame time within 16.7 ms budget
+RESULT failures=0

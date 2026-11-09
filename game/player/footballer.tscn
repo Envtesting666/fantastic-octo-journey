@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://player/player_controller.gd" id="1"]
+[ext_resource type="PackedScene" path="res://assets/characters/footballer_mh.glb" id="2"]
+[ext_resource type="Script" path="res://player/locomotion.gd" id="3"]
+[ext_resource type="Script" path="res://player/ball_control.gd" id="4"]
+
+[sub_resource type="CapsuleShape3D" id="Capsule"]
+radius = 0.24
+height = 1.76
+
+[node name="Player" type="CharacterBody3D"]
+collision_layer = 2
+script = ExtResource("1")
+floor_snap_length = 0.25
+floor_stop_on_slope = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+position = Vector3(0, 0.89, 0)
+shape = SubResource("Capsule")
+
+[node name="Visual" type="Node3D" parent="."]
+
+[node name="Footballer" parent="Visual" instance=ExtResource("2")]
+rotation = Vector3(0, 3.14159265, 0)
+
+[node name="Locomotion" type="Node" parent="Visual" node_paths=PackedStringArray("model")]
+script = ExtResource("3")
+model = NodePath("../Footballer")
+
+[node name="BallControl" type="Node" parent="." node_paths=PackedStringArray("locomotion")]
+script = ExtResource("4")
+locomotion = NodePath("../Visual/Locomotion")
